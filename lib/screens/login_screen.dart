@@ -89,7 +89,7 @@ class _LoginForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               disabledColor: Colors.grey,
               elevation: 0,
-              color: Colors.deepPurple,
+              color: Color.fromRGBO(216, 109, 109, 1),
               child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                   child: Text(
@@ -117,12 +117,12 @@ class _LoginForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               disabledColor: Colors.grey,
               elevation: 0,
-              color: Colors.deepPurple,
+              color: Color.fromRGBO(245, 245, 245, 1),
               child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                   child: Text(
                     loginForm.isLoading ? 'Espere' : 'Registrate',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Color.fromRGBO(216, 109, 109, 1)),
                   )),
               onPressed: loginForm.isLoading
                   ? null
