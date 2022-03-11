@@ -1,8 +1,6 @@
-import 'package:conectados/widgets/auth_background.dart';
 import 'package:flutter/material.dart';
 import 'package:conectados/providers/login_form_provider.dart';
 import 'package:provider/provider.dart';
-
 import 'package:conectados/ui/input_decorations.dart';
 import 'package:conectados/widgets/widgets.dart';
 
@@ -22,6 +20,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               Text('Login', style: Theme.of(context).textTheme.headline4),
+              Image.asset('assets/images/inicio.png'),
               const SizedBox(height: 30),
               ChangeNotifierProvider(
                   create: (_) => LoginFormProvider(), child: _LoginForm())
