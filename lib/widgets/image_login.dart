@@ -9,7 +9,7 @@ class Imagelogin extends StatelessWidget {
       body: Container(
         color: Colors.white,
         child: Image.asset(
-          'assets/inicio.jpg',
+          'assets/inicio.png',
         ),
       ),
     );

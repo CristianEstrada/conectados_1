@@ -19,9 +19,8 @@ class LoginScreen extends StatelessWidget {
               child: Column(
             children: [
               const SizedBox(height: 10),
-              Text('Login', style: Theme.of(context).textTheme.headline4),
               Image.asset('assets/images/inicio.png'),
-              const SizedBox(height: 30),
+              const SizedBox(height: 50),
               ChangeNotifierProvider(
                   create: (_) => LoginFormProvider(), child: _LoginForm())
             ],
@@ -130,19 +129,7 @@ class _LoginForm extends StatelessWidget {
               onPressed: loginForm.isLoading
                   ? null
                   : () async {
-                      FocusScope.of(context).unfocus();
-
-                      if (!loginForm.isValidForm()) return;
-
-                      loginForm.isLoading = true;
-
-                      await Future.delayed(const Duration(seconds: 2));
-
-                      // ignore: todo
-                      // TODO: validar si el login es correcto
-                      loginForm.isLoading = false;
-
-                      Navigator.pushReplacementNamed(context, 'home');
+                      Navigator.pushReplacementNamed(context, 'register');
                     })
         ],
       ),

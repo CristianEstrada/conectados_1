@@ -15,6 +15,7 @@ class Conectados extends StatelessWidget {
       routes: {
         'login': (_) => const LoginScreen(),
         'home': (_) => const HomeScreen(),
+        'register': (_) => const RegisterScreen(),
       },
       theme:
           ThemeData.light().copyWith(scaffoldBackgroundColor: Colors.white10),

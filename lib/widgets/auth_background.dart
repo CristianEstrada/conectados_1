@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:conectados/ui/nav_bar_superior.dart';
 
 class AuthBackground extends StatelessWidget {
   final Widget child;
@@ -13,7 +14,7 @@ class AuthBackground extends StatelessWidget {
       height: double.infinity,
       child: Stack(
         children: [
-          _PurpleBox(),
+          _Greybackground(),
           _HeaderIcon(),
           child,
         ],
@@ -25,17 +26,13 @@ class AuthBackground extends StatelessWidget {
 class _HeaderIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        width: double.infinity,
-        margin: const EdgeInsets.only(top: 30),
-        child: const Icon(Icons.person_pin, color: Colors.blue, size: 100),
-      ),
+    return const SafeArea(
+      child: NavBarSuperior(),
     );
   }
 }
 
-class _PurpleBox extends StatelessWidget {
+class _Greybackground extends StatelessWidget {
   get colors => null;
 
   @override
