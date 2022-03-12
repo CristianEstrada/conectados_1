@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:conectados/providers/login_form_provider.dart';
+import 'package:conectados/providers/provider.dart';
 import 'package:provider/provider.dart';
-import 'package:conectados/ui/input_decorations.dart';
 import 'package:conectados/widgets/widgets.dart';
+import 'package:conectados/ui/uis.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -88,12 +88,13 @@ class _LoginForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               disabledColor: Colors.grey,
               elevation: 0,
-              color: Color.fromRGBO(216, 109, 109, 1),
+              color: const Color.fromRGBO(216, 109, 109, 1),
               child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                   child: Text(
                     loginForm.isLoading ? 'Espere' : 'Ingresar',
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   )),
               onPressed: loginForm.isLoading
                   ? null
@@ -104,8 +105,9 @@ class _LoginForm extends StatelessWidget {
 
                       loginForm.isLoading = true;
 
-                      await Future.delayed(Duration(seconds: 2));
+                      await Future.delayed(const Duration(seconds: 2));
 
+                      // ignore: todo
                       // TODO: validar si el login es correcto
                       loginForm.isLoading = false;
 
@@ -116,12 +118,14 @@ class _LoginForm extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10)),
               disabledColor: Colors.grey,
               elevation: 0,
-              color: Color.fromRGBO(245, 245, 245, 1),
+              color: const Color.fromRGBO(245, 245, 245, 1),
               child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
                   child: Text(
                     loginForm.isLoading ? 'Espere' : 'Registrate',
-                    style: TextStyle(color: Color.fromRGBO(216, 109, 109, 1)),
+                    style: const TextStyle(
+                        color: Color.fromRGBO(216, 109, 109, 1)),
                   )),
               onPressed: loginForm.isLoading
                   ? null
@@ -132,8 +136,9 @@ class _LoginForm extends StatelessWidget {
 
                       loginForm.isLoading = true;
 
-                      await Future.delayed(Duration(seconds: 2));
+                      await Future.delayed(const Duration(seconds: 2));
 
+                      // ignore: todo
                       // TODO: validar si el login es correcto
                       loginForm.isLoading = false;
 

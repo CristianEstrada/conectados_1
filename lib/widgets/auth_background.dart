@@ -7,7 +7,7 @@ class AuthBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // color: Colors.red,
       width: double.infinity,
       height: double.infinity,
@@ -15,7 +15,7 @@ class AuthBackground extends StatelessWidget {
         children: [
           _PurpleBox(),
           _HeaderIcon(),
-          this.child,
+          child,
         ],
       ),
     );
@@ -47,7 +47,7 @@ class _PurpleBox extends StatelessWidget {
       height: size.height * 0.4,
       decoration: _whiteBackground(),
       child: Stack(
-        children: [],
+        children: const [],
       ),
     );
   }
