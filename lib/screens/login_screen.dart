@@ -19,17 +19,11 @@ class LoginScreen extends StatelessWidget {
               child: Column(
             children: [
               const SizedBox(height: 10),
-              Image.asset('assets/images/inicio.png'),
               const SizedBox(height: 50),
               ChangeNotifierProvider(
                   create: (_) => LoginFormProvider(), child: _LoginForm())
             ],
           )),
-          const SizedBox(height: 50),
-          const Text(
-            'REGISTRATE',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
           const SizedBox(height: 50),
         ],
       ),
@@ -112,25 +106,6 @@ class _LoginForm extends StatelessWidget {
 
                       Navigator.pushReplacementNamed(context, 'home');
                     }),
-          MaterialButton(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              disabledColor: Colors.grey,
-              elevation: 0,
-              color: const Color.fromRGBO(245, 245, 245, 1),
-              child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 80, vertical: 15),
-                  child: Text(
-                    loginForm.isLoading ? 'Espere' : 'Registrate',
-                    style: const TextStyle(
-                        color: Color.fromRGBO(216, 109, 109, 1)),
-                  )),
-              onPressed: loginForm.isLoading
-                  ? null
-                  : () async {
-                      Navigator.pushReplacementNamed(context, 'register');
-                    })
         ],
       ),
     );
